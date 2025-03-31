@@ -8,18 +8,19 @@
   position: relative;
   margin-top: 50px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 .wrapper__input {
   max-width: 600px;
   width: 100%;
   height: 50px;
-  font-size: 25px;
+  font-size: clamp(18px, 2.7643400138vw, 40px);
   padding: 5px;
 }
 .wrapper__btn {
+  position: fixed;
   position: absolute;
   margin-bottom: 20px;
   width: 50px;
@@ -29,6 +30,7 @@
 }
 .wrapper__list {
   font-size: 25px;
+  font-size: clamp(18px, 4.4920525225vw, 65px);
 }
 
 /*# sourceMappingURL=styles.css.map */

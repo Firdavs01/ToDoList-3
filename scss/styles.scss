@@ -1,26 +1,42 @@
+@import 'effects';
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+@mixin default-flex() {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin text-size($min, $max) {
+    font-size: clamp(#{$min}px, #{$max / 1447 * 100}vw, #{$max}px);
+}
+
+@mixin inp-size($min, $max) {
+    max-width: clamp(#{320}px, #{$max / 1447 * 100}vw, #{$max}px);
+    width: 100%;
+}
+
 .wrapper {
     position: relative;
     margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include default-flex;
 
     &__input{
         max-width: 600px;
         width: 100%;
         height: 50px;
-        font-size: 25px;
+        @include text-size(18, 40);
         padding: 5px;
     }
 
     &__btn {
+        position: fixed;
         // margin-top: 15px;
         position: absolute;
         margin-bottom: 20px;
@@ -28,9 +44,13 @@
         height: 40px;
         top: 5px;
         right: 320px;
+        // overflow: hidden;
+        // position: relative;
+        // z-index: 0;
     }
 
     &__list {
         font-size: 25px;
+        @include text-size(18, 65)
     }
 }

@@ -1,0 +1,22 @@
+// //! btn effects
+
+// .wrapper__btn::before {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     width: 0%;
+//     height: 100%;
+//     background: yellow;
+//     z-index: -1;
+//     transition: 0.5s;
+// }
+
+// .wrapper__btn:hover::before {
+//     width: 100%;
+//     left: 0;
+// }
+
+// .wrapper__btn:hover {
+//     color: #fff;
+// }
